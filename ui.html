@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+            .container{
+                display: flex;
+                flex-direction: row;
+                height: 150vh
+            }
+            .side-bar{
+                width: 20%;
+                height: 150vh;
+                border: 2vh solid orange;
+                box-sizing: border-box;
+                color: orange;
+                justify-content: center;
+                font-size: 8vh;
+            }
+            .right-table{
+                width: 80%;
+                height: 150vh;
+                box-sizing: border-box;
+                background: url(thuysinh.jpg) local;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+            }
+            .top{
+                height: 20vh;
+                width: 100%;
+                margin-top: 10vh;
+                background: white;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0px;
+                z-index: 1;
+            }
+            .bot{
+                display:flex;
+                flex-direction: row;
+                height: 50vh;
+                width: 90vh;
+                background: url(betta.jpg) local no-repeat center;
+                border-radius: 15vh;
+                box-shadow: 0vh 0vh 1vh 1vh pink ;
+                align-items: space-between;
+                position: relative;
+                top: 20vh;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-bar">This is a beautifull side-bar</div>
+            <div class="right-table">
+                <div class="top" style="display: flex;">
+                    <div style="margin-left: 4vh; font-size: 10vh;">FED O1</div>
+                    <div style="margin-right: 4vh; font-size: 5vh;">Account</div>
+                </div>
+                <div class="bot" style="color: lightblue; font-size: 5vh;">
+                    <div style="padding: 20vh">Homework 5<br>CSS Selector, Position</div>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

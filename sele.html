@@ -1,0 +1,75 @@
+<!Doctype hml>
+<html>
+    <head>
+        <style>
+            #content{
+                color: red;
+            }
+            div{
+                font-size: 20px;
+            }
+            .div p{
+                line-height: 27px;
+            }
+            p:hover{
+                background-color: aqua;
+                text-decoration: red underline;
+            }
+            p:focus{
+                text-decoration: underline;
+            }
+            p::before{
+                content: "This is---------";
+            }
+            p::after{
+                content: "----------now insert the text after content of each p"
+            }
+            p::first-line{
+                padding: 15px 30px;
+            }
+            p[data-content=tryit]{
+                margin: 0 auto;
+                width: 150px; 
+                text-align: center; 
+            }
+            .content{
+                color: pink;
+            }
+            p:first-child{
+                color: rbg(10,100,200)
+            }
+            #content{
+                color: rgba(36, 23,44, 0.5)
+            }
+            p{
+                color: #f24af4;
+            }
+            * {
+                color: blue
+            }
+            #background{
+                width: 400px; 
+                height: 200px; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                background-image: url(Jay-Chou.jpg);
+                background-position: center;     
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: linear-gradient(red, yellow, blue, violet, green, darkblue, lightblue);
+            }
+            div[targer=cover]{
+                background: no-repeat center linear-gradient(red, yellow, blue, violet, green, darkblue, lightblue) cover url(Jay-Chou.jpg);
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>bài luyện tập: selector; color; background</h1>
+        <p>sử dụng các selector khác nhau để style cho các thẻ có nội dung "try Yourself"</p>
+        <div id="Background" target="cover">
+            <p id="content" class="content" data-content="tryit">Try Yourself</p>
+        </div>
+    </body>
+</html>
