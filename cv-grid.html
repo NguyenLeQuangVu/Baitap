@@ -1,0 +1,147 @@
+<html>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 300px 600px;
+            height: 1050px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .left-table{
+            min-width: 150px;
+            display: grid;
+            grid-template-rows: 250px 250px 200px 200px 100px 130px 130px;
+            background-color: rgb(49,175,251);
+        }
+        .right-table{
+            box-sizing: border-box;
+        }
+        .img{
+            margin: 20px;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .info div{
+            text-align: center;
+        }
+        .item1{ 
+            grid-area: 1; }
+        .item2{ 
+            grid-area: 2; }
+        .Lang{
+            text-align: center;
+            display: grid;
+            grid-template-columns: auto auto auto ;
+            grid-template-rows: auto auto auto ;
+            gap: 8px;
+        }
+        .language{
+            grid-column: 1 / span 3;
+        }
+        .Other{
+            display: Grid;
+            grid-template-rows: auto auto auto auto ;
+            gap: 8px;
+            text-align: center;
+        }
+        .Link{
+            display: Grid;
+            grid-template-rows: auto auto ;
+            grid-template-columns: auto auto ;
+            align-items: space-between ;
+        }
+        .Linkre{
+            grid-column: 1 / 3;
+        }
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="left-table">
+                <div class="img"><img src="./Jay-Chou.jpg" Alt="Ảnh Cá Nhân Vũ" Style="height: 206px; width: 250px"></div>
+                <div class="info">
+                    <div style="text-decoration: center; font-size: 28px; text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px pink;">NGUYỄN QUANG VŨ</div>
+                    <br>
+                    <div style="font-size:25px; color: white; margin: 10px; text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px pink;" >FE DEVELOP</div>
+                    <div style="text-align: left;">
+                        <ul>
+                            <li><span><img src="./calendar2-month.svg"> 01/08/1995</span></li>
+                            <li><span><img src="./phone.svg"> 0349740774</span></li>
+                            <li><span><img src="./house-door.svg"> Hội An</span></li>
+                            <li><span><img src="./envelope-plus.svg"> Nguyenlequangvupro@gmail.com</span></li>
+                        </ul>
+                    <div style="color: white; font-size: 25px; text-decoration: underline;">Programing Skills</div>
+                    </div>
+                </div>
+                <div class="Lang">
+                    <div class="Language" style="font-size: 20px; color: orange; text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px pink;">Language</div>
+                    <div>Java</div>
+                    <div>C</div>
+                    <div>Ruby</div>
+                    <div>Script</div>
+                    <div>C++</div>
+                    <div>PHP</div>
+                    <div>Javascript</div>
+                    <div>C#</div>
+                    <div>Python</div>
+                </div>
+                <div class="Other">
+                    <div style="font-size: 20px; color: orange; text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px pink;">Other Skill</div>
+                    <div style="text-align: left; padding-left: 20px;">Presentation by English</div>
+                    <div style="text-align: left; padding-left: 20px;">Communication</div>
+                    <div style="text-align: left; padding-left: 20px;">Teamwork</div>
+                </div>
+                <div class="Link">
+                    <div class="Linkre" style="font-size: 20px; color: orange; text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px pink;">Link reference</div>
+                    <a rel="stylesheet" href="https://github.com/NguyenLeQuangVu">Git</a>
+                    <a rel="stylesheet" href="https://www.facebook.com/quangvu.nguyen.73307/">Facebook</a>
+                </div>
+                <div class="sth">
+                    <div style="color: white; font-size: 25px; text-decoration: underline;">Something About Me</div>
+                    <div style="margin-top:20px">I master skills in css, html, js. I used the skills I had accumulated in the most flexible and precise way.</div>
+                </div>
+                <div class="inter">
+                    <div style="font-size: 20px; color: orange; text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px pink;">Interesting</div>
+                    <ul style="text-align: left;">
+                        <li>Play Music</li>
+                        <li>Listen to music</li>
+                        <li>Drink Coffee</li>
+                        <li>Play Cellphone Games</li>
+                </div>
+            </div>
+            <div class="right-table" style="text-align: left; padding: 15px; background-color:hsl(162, 76%, 48%);">
+                <div style="color: rgb(17, 102, 230); font-size: 20px; text-decoration-line: underline; font-weight: bold; margin: 0px 0px 15px 0px;">Experience Working</div>
+                <div style="color: orange; font-weight: bold;">From 14/02/2022 to 15/02/2022</div>
+                <br>
+                <div><i>Project:</i><b> HOMEWORK 1</b> <i>,role:</i> <b> FE Developer</b></div>
+                <br>
+                <div>Basic HTML and CSS</div>
+                <ul>
+                    <li>Know how to create an html file</li>
+                    <li>Know how to edit texts in html</li>
+                    <li>Know how to edit the properties of a paragraph</li>
+                </ul>
+                <div style="color: orange; font-weight: bold;">From 16/02/2022 to 18/02/2022</div>
+                <br>
+                <div><i>Project:</i><b> HOMEWORK 2</b><i>,role:</i> <b> FE Developer</b></div>
+                <br>
+                <div>Create a model box</div>
+                <ul>
+                    <li>Know how to create model box</li>
+                    <li>Know how to edit box in css</li>
+                    <li>Have Knowledge of box sizing</li>
+                </ul>
+                <div style="color: rgb(17, 102, 230); font-size: 20px; text-decoration-line: underline; font-weight: bold; margin: 0px 0px 15px 0px;">Education</div>
+                <div style="color: orange; font-weight: bold; ">From 2014 to 2018 </div><br>
+                <div>Danang University of Foreign Languages, Academic Achievement: Good</div><br>
+                <div style="color: rgb(17, 102, 230); font-size: 20px; text-decoration-line: underline; font-weight: bold; margin: 0px 0px 15px 0px;">Certification</div>
+                <div>HSK5</div>
+                <br>
+                <div>B1</div>
+            </div>
+        </div>
+        </html>
+    </body>
+</html>
