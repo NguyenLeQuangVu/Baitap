@@ -1,0 +1,974 @@
+<html>
+    <head>
+        <title>Đấu giá trực tuyến</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .body{
+                width: 1499px;
+                display: inline;
+                margin: 0px;
+                box-sizing: border-box;
+            }
+            .header__outside{
+                opacity: 0.5;
+            }
+            .header{
+                width: 100%;
+            }
+            .header__top{
+                display: flex;
+                background-color: rgba(27, 31, 26, 1);
+                height: 60px;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            .header__top--left{
+                display: flex;
+                margin-left: 75px;
+                font-weight: 400;
+                font-size: 16px;
+                color: #FFFFFF;
+                opacity: 0.5;
+            }
+            .phone-number{
+                display: flex;
+            }
+            .email{
+                display: flex;
+                margin-left: 80px;
+            }
+            .number{
+                margin-top: 6px;
+                padding-left: 4px;
+            }
+            .email-content{
+                margin-top: 4px;
+                padding-left: 4px;
+            }
+            .header__top--right{
+                display: flex;
+                font-weight: 400;
+                font-size: 16px;
+                color: #7DF840;
+                margin-right: 75px;
+            }
+            .register{
+                margin-right: 50px;
+            }
+            .logo{
+                background-image: url("logo.png");
+                width: 40%;
+                height: 50%;
+                background-repeat: no-repeat;
+                margin-left: 73px;
+            }
+            .header__bot{
+                width: 100%;
+                height: 115px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgba(27, 31, 26, 0.1);
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+            }
+            .header__bot--right{
+                display: flex;
+                justify-content: space-around;
+                width: 50%;
+                font-weight: 400;
+                font-size: 20px;
+                font-family: 'Roboto';
+                line-height: 23px;
+                color: #1B1F1A;
+            }
+            .__bot--right--icon{
+                height: 25px;
+                width: 25px;
+                background-image: url("kinhlup.png");
+                margin-right: 35px;
+            }
+            .content{
+                width: 100%;
+                height: 1400px;
+            }
+            .home-page--icon{
+                background-image: url("home.png");
+                height: 22px;
+                width: 22px;
+            }
+            .home-page{
+                height: 70px;
+                display: flex;
+                align-items: end;
+                padding-left: 75px;
+                width: auto;
+            }
+            .home-page--content{
+                padding-top: 10px;
+                margin-left: 10px;
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 18px;
+                color: #1B1F1A;
+                opacity: 0.5;
+            }
+            .content-right{
+                margin-left: 15px;
+            }
+            .content-left{
+                width: 60%;
+                margin-left: 75px;
+            }
+            .content-left__top{
+                display: flex;
+                height: 19%;
+                min-width: 350px;
+                flex-direction: column;
+                font-family: 'Roboto';
+                font-style: italic;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 35px;
+                color: #1B1F1A;
+
+            }
+            .content-left__top--content2{
+                display: flex;
+            }
+            .content-left__top--content2-content{
+                margin-left: 10px;
+            }
+            .content-left__top--content3{
+                display: flex;
+            }
+            .content-left__top--content3-content{
+                margin-left: 8px;
+            }
+            .content-left__top--content2-icon{
+                background-image: url("position.png");
+                width: 20px;
+                height: 20px;
+            }
+            .content-left__top--content3-icon{
+                background-image: url("note.png");
+                width: 22px;
+                height: 22px;
+            }
+            .content-left__top--content1{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 35px;
+                color: #1B1F1A;
+            }
+            .content-left__top--content4{
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+            }
+            .-left__top--content4-first-icon{
+                background-image: url("wavingflag.png");
+                width: 20px;
+                height: 20px;
+                margin-top: 3px;
+            }
+            .content-left__top--content4 > div{
+                display: flex;
+            }
+            .-left__top--content4-second-icon{
+                background-image: url("brick.png");
+                width: 20px;
+                height: 20px;
+                margin-top: 3px;
+            }
+            .-left__top--content4-third-icon{
+                background-image: url("nihon.png");
+                width: 20px;
+                height: 20px;
+                margin-top: 5px;
+            }
+            .-left__top--content4-fourth-icon{
+                background-image: url("jikan.png");
+                height: 22px;
+                width: 22px;
+                margin-top: 5px;
+            }
+            .-left__top--content4-first-content{
+                opacity: 0.5;
+                padding-left: 9px;
+            }
+            .-left__top--content4-second-content{
+                opacity: 0.5;
+                padding-left: 10px;
+            }
+            .-left__top--content4-third-content{
+                opacity: 0.5;
+                padding-left: 10px;
+            }
+            .-left__top--content4-fourth-content{
+                opacity: 0.5;
+                padding-left: 10px;
+            }
+            .content-left__mid{
+                height: 62%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .img-big{
+                background-image: url("taisan.png");
+                background-attachment: local;
+                height: 80%;
+            }
+            .img-small{
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                height: 20%;
+            }
+            .img-small1{
+                width: 23%;
+                background-image: url("taisan.png");
+                background-attachment: local;
+                background-size: 100% 100%;
+            }
+            .img-small2{
+                width: 23%;
+                background-image: url("taisan.png");
+                background-attachment: local;
+                background-size: 100% 100%;
+
+            }
+            .img-small3{
+                width: 23%;
+                background-image: url("taisan.png");
+                background-attachment: local;
+                background-size: 100% 100%;
+            }
+            .img-small4{
+                width: 23%;
+            }
+            .content-left__bot{
+                height: 18%;
+            }
+            .content-left__bot-first{
+                display: flex;
+                text-align: center;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+            .content-left__bot-first-1{
+                width: 30%;
+                font-family: 'Roboto';
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 28px;
+                border-bottom: 2px solid #7DF840;
+            }
+            .content-left__bot-first-2{
+                width: 30%;
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                color: #1B1F1A;
+                opacity: 0.5;
+            }
+            .content-left__bot-first-3{
+                width: 30%;
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                color: #1B1F1A;
+                opacity: 0.5;
+            }
+            .content-left__bot-second{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                margin-top: 30px;
+            }
+            .content-main{
+                display: flex;
+                height: 100%;
+            }
+            
+            .content-right__top{
+                height: 19%;
+                display: flex;
+                width: 100%;
+            }
+            .content-right__bot{
+                height: 81%;
+            }
+            .triangle-left{
+                width: 0;
+                height: 0;
+                border-top: 39px solid transparent;
+                border-right: 25px solid rgba(27, 31, 26, 1);
+                border-bottom: 39px solid transparent;
+            }
+            .rectangle{
+                width: 100%;
+                height: 78px;
+                background: rgba(27, 31, 26, 1);
+            }
+            .triangle-right{
+                width: 0;
+                height: 0;
+                border-top: 39px solid transparent;
+                border-left: 25px solid rgba(27, 31, 26, 1);
+                border-bottom: 39px solid transparent;
+            }
+            .rectangle{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .rectangle-content1{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 29px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            .rectangle-content2{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 29px;
+                text-transform: uppercase;
+                color: #7DF840;
+            }
+            .content-right__bot-first{
+                height: 16%;
+                width: 100%;
+                height: 112px;
+                background: rgb(232,228,225);
+                border-radius: 5px;
+            }
+            .content-right__bot-first--top{
+                font-family: 'Roboto';
+                font-weight: 900;
+                font-size: 20px;
+                line-height: 35px;
+                text-transform: uppercase;
+                color: rgba(27, 31, 26, 1);
+                text-align: start;
+                padding-top: 20px;
+                margin-left: 20px;
+            }
+            .content-right__bot-first--bot{
+                font-family: 'Roboto';
+                font-weight: 900;
+                font-size: 25px;
+                line-height: 35px;
+                color: #5DCC26;
+                text-align: end;
+                padding-top: 8px;
+                margin-right: 20px;
+                letter-spacing: 4px;
+            }
+            .content-right__bot-second{
+                background-color: #1B1F1A;
+                margin-top: 15px;
+                width: 100%;
+                border-radius: 5px;
+                height: auto;   
+            }
+            .content-right__bot-second1{
+                height: 7%;
+                font-family: 'Roboto';
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 29px;
+                text-transform: uppercase;
+                color: #7DF840;
+                padding-top: 30px;
+                padding-left: 24px;
+                border-bottom: 1px solid #757373;
+            }
+            .content-right__bot-second2{
+                height: 8.5%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 24px 0px 24px;
+                align-items: center;
+                border-bottom: 1px solid #757373;
+            }
+            .content-right__bot-second3{
+                height: 8.5%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 24px 0px 24px;
+                align-items: center;
+                border-bottom: 1px solid #757373;
+            }
+            .content-right__bot-second4{
+                height: 8.5%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 24px 0px 24px;
+                align-items: center;
+                border-bottom: 1px solid #757373;
+            }
+            .content-right__bot-second5{
+                height: 8.5%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 24px 0px 24px;
+                align-items: center;
+                border-bottom: 1px solid #757373;
+            }
+            .content-right__bot-second6{
+                height: 8.5%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 24px 0px 24px;
+                align-items: center;
+                border-bottom: 1px solid #757373;
+            }
+            .content-right__bot-second7{
+                height: 8.5%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 24px 0px 24px;
+                align-items: center;
+                border-bottom: 1px solid #757373;
+            }
+            .content-right__bot-second8{
+                height: 8.5%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 24px 0px 24px;
+                align-items: center;
+                border-bottom: 1px solid #757373;
+            }
+            div[target=left]{
+                font-family: 'Roboto';
+                font-weight: 450;
+                font-size: 20px;
+                line-height: 70px;
+                color: #FFFFFF;
+                opacity: 0.5;
+            }
+            div[target=right]{
+                font-family: 'Roboto';
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 60px;
+                text-align: right;
+                color: #7DF840;            
+            }
+            .content-right__bot-second__shape{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 0px 24px 0px 24px;
+            }
+            .content-right__bot-second__shape-first{
+                display: flex;
+                height: 10%;
+                background: rgb(75, 75, 78);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+                align-items: center;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .__bot-second__shape-first1{
+                width: 10%;
+                height: 100%;
+                color:#5DCC26;
+                font-size: 40px;
+                font-weight: 1000;
+            }
+            .__bot-second__shape-first3{
+                width: 10%;
+                height: 100%;
+                color:#5DCC26;  
+                font-size: 40px;
+                font-weight: 1000;
+            }
+            .__bot-second__shape-first2{
+                width: 80%;
+                height: 30px;
+                border-left: 2px solid #6b6868;
+                border-right: 2px solid #7e7373;
+            }
+            .content-right__bot-second__shape-second{
+                display: flex;
+                background: #5DCC26;
+                width: 80%;
+                margin-left: 10%;
+                margin-bottom: 10px;
+            }
+            .__bot-second__shape-second1{
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-right: 40px solid #5DCC26;
+                border-bottom: 47px solid transparent;
+                background:#1B1F1A;
+            }
+            .__bot-second__shape-second3{
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-left: 40px solid #5DCC26;
+                border-bottom: 47px solid transparent;
+                background:#1B1F1A;
+            }
+            .__bot-second__shape-second2{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                font-family: 'Roboto';
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 33px;
+                text-align: center;
+                color: #1B1F1A;
+                justify-content: space-around;
+            }
+            .content-comment{
+                height: 700px;
+                margin-left: 70px;
+            }
+            .content-comment-first{
+                display: flex;
+                height: 7%;
+            }
+            .content-comment-first-icon{
+                background: url("message.png");
+                width: 22px;
+                height: 22px;
+            }
+            .content-comment-first-content{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 28px;
+                color: #1B1F1A;
+                margin-left: 20px;
+            }
+            .content-comment-second{
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #1B1F1A;
+                opacity: 0.5;
+            }
+            .content-comment-third{
+                height: 15%;
+                width: 96%;
+                background: #f4f4f4;
+                border-radius: 5px;
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .content-comment-third--left{
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #1B1F1A;
+                opacity: 0.5;
+                padding: 5px 0px 0px 15px;
+            }
+            .content-comment-third--right{
+                background-image: url("toong.png");
+                width: 6%;
+                height: 70%;
+                background-size: 100% 100%;
+                padding: 20px 20px 0px 0px;
+            }
+            .content-endding{
+                height: 300px;
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                background-color: #1B1F1A;
+                padding-top: 5%;
+            }
+            .content-endding-logo{
+                background: url("logo2.png");
+                height: 40%;
+                width: 20%;
+                background-size: 100% 100%;
+            }
+            .content-endding1-title{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 29px;
+                color: #FFFFFF;
+            }
+            .content-endding1-content{
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 50px;
+                color: #FFFFFF;
+                opacity: 0.5;
+            }
+            .content-endding2-title{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 29px;
+                color: #FFFFFF;
+            }
+            .content-endding2-content{
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 50px;
+                color: #FFFFFF;
+                opacity: 0.5;
+            }
+            .content-endding3-title{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 29px;
+                color: #FFFFFF;
+            }
+            .content-endding3-content{
+                height: 20%;
+                background-color: #323531;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+                margin-top: 5%;
+                padding: 3% 3% 0% 3%;
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+            }
+            .content-endding3-content--left{
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+                opacity: 0.5;
+            }
+            .content-endding3-content--right{
+                background-image: url("email2.png");
+                height: 34px;
+                width: 37px;
+                border-left: 1px solid #FFFFFF;
+            }
+            @media only screen and (max-width: 768px){
+                .body{
+                    width: 768px;
+                }
+                .container{
+                    width: 100%;
+                }
+                .header{
+                    height: 200px;
+                }
+                .header__top--right{
+                    width: 5%;
+                    flex-direction: column;
+                }
+                .header__bot--right{
+                    width: 50%;
+                }
+                .logo{
+                    width: 50%;
+                    height: 50%;
+                    margin-left: 0px;
+                }
+                .content{
+                    display: block;
+                    width: 100%;
+                    height: 2000px;
+                }
+                .home-page{
+                    padding-left: 0px;
+                }
+                .content-main{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .content-left{
+                    width: 100%;
+                    margin-left: 0px;
+                    height: 55%;
+                }
+                .content-right{
+                    height: 575px;
+                    margin-left: 0px;
+                }
+                .rectangle{
+                    width: 100%;
+                }
+                .rectangle-content1{
+                    font-size: 30px;
+                }
+                .content-right__bot-first{
+                    width: 100%;
+                }
+                .content-right__bot-first--top{
+                    font-size: 35px;
+                }
+                .content-right__bot-first--bot{
+                    font-size: 40px;
+                }
+                .content-right__bot-second{
+                    width: 100%;
+                }
+                .__bot-second__shape-second2{
+                    font-size: 50px;
+                }
+                .content-comment{
+                    margin-left: 0px;
+                    height: 400px;
+                }
+                .content-comment-third--right{
+                    height: 30px;
+                    width: 30px;
+                }
+                .content-comment-third{
+                    width: 100%;
+                    padding-top: 20px;
+                }
+                .content-comment-second{
+                    height: 10%;
+                    margin-top: 20px
+                }
+                .content-comment-third{
+                    height: 20%;
+                }
+                .content-endding-logo{
+                    display: none;
+                }
+                .content-endding{
+                    padding-top: 15px;
+                    padding-left: 15px;
+                }
+                .logo-mobile{
+                    background-image: url("logo2.png");
+                    width: 40%;
+                    height: 40%;
+                    background-size: 100% 100%;
+                    padding-left: 50%;
+                }
+                .__bot--right--content2{
+                    margin-top: 30px;
+                }
+                .__bot--right--content4{
+                    margin-top: 30px;
+                }
+                .content-endding2-content{
+                    line-height: 35px;
+                }
+                .content-endding1-content{
+                    line-height: 35px;
+                }
+                .__bot-second__shape-first1{
+                    padding-top: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="header__outside">Xem thông tin và đặt giá đấu</div>
+                <div class="header__top">
+                    <div class="header__top--left">
+                        <div class="phone-number">
+                            <img src="./phone.png" style="width: 26px; height: 26px;">
+                            <div class="number">+084 349.74 07 74</div>
+                        </div>
+                        <div class="email">
+                            <img src="./email.png" style="width: 26px; height: 25px;">
+                            <div class="email-content">Nguyenlequangvupro@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="header__top--right">
+                        <div class="register">Register</div>
+                        <div class="login">Login</div>
+                    </div>
+                </div>
+                <div class="header__bot">
+                    <div class="logo"></div>
+                    <div class="header__bot--right">
+                        <div class="__bot--right--content1">Tài sản đấu giá</div>
+                        <div class="__bot--right--content2">Liên hệ</div>
+                        <div class="__bot--right--content3">Tin tức</div>
+                        <div class="__bot--right--content4">Hỗ trợ</div>
+                        <div class="__bot--right--icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-page">
+                <div class="home-page--icon"></div>
+                <div class="home-page--content">Trang chủ / Auction / 28</div>
+            </div>
+            <div class="content">
+                <div class="content-main">
+                    <div class="content-left">
+                        <div class="content-left__top">
+                            <p class="content-left__top--content1">Tên Tài Sản Biệt Thự I Của Thằng Quang Hiếu</p>
+                            <div class="content-left__top--content2">
+                                <div class="content-left__top--content2-icon"></div>
+                                <div class="content-left__top--content2-content" style="opacity: 0.5;">Lorem ipsum dolor sit amet consectetur</div>
+                            </div>
+                            <div class="content-left__top--content3">
+                                <div class="content-left__top--content3-icon"></div>
+                                <div class="content-left__top--content3-content" style="opacity: 0.5;">Lorem ipsum dolor sit amet consectetur</div>
+                            </div>
+                            <div class="content-left__top--content4">
+                                <div class="-left__top--content4-first">
+                                    <div class="-left__top--content4-first-icon"></div>
+                                    <div class="-left__top--content4-first-content">Lorem</div>
+                                </div>
+                                <div class="-left__top--content4-second">
+                                    <div class="-left__top--content4-second-icon"></div>
+                                    <div class="-left__top--content4-second-content">Lorem</div>
+                                </div>
+                                <div class="-left__top--content4-third">
+                                    <div class="-left__top--content4-third-icon"></div>
+                                    <div class="-left__top--content4-third-content">Lorem</div>
+                                </div>
+                                <div class="-left__top--content4-fourth">
+                                    <div class="-left__top--content4-fourth-icon"></div>
+                                    <div class="-left__top--content4-fourth-content">Lorem</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-left__mid">
+                            <div class="img-big"></div>
+                            <div class="img-small">
+                                <div class="img-small1"></div>
+                                <div class="img-small2"></div>
+                                <div class="img-small3"></div>
+                                <div class="img-small4"></div>
+                            </div>
+                        </div>
+                        <div class="content-left__bot">
+                            <div class="content-left__bot-first">
+                                <div class="content-left__bot-first-1">Mô tả sản phẩm</div>
+                                <div class="content-left__bot-first-2">Điều khoản chi tiết</div>
+                                <div class="content-left__bot-first-3">Lịch sử đấu thầu</div>
+                            </div>
+                            <div class="content-left__bot-second">Biệt Thự nằm tại tuyến đường Huỳnh Thúc Kháng khu Tân An Hội An. Cách trung tâm phố cổ 3km, 4 tầng có hồ bơi và phòng gym, tổng cộng hơn 15 phòng đầy đủ tiện nghi nội thất sang trọng. </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="content-right__top">
+                            <div class="triangle-left"></div>
+                            <div class="rectangle">
+                                <div class="rectangle-content1">THẦU BẮT ĐẦU TỪ:</div>
+                                <div class="rectangle-content2">$89</div>
+                            </div>
+                            <div class="triangle-right"></div>
+                        </div>
+                        <div class="content-right__bot">
+                            <div class="content-right__bot-first">
+                                <div class="content-right__bot-first--top">Kết Thúc Trong</div>
+                                <div class="content-right__bot-first--bot"> 11d 2h 17m 10s </div>
+                            </div>
+                            <div class="content-right__bot-second">
+                                <div class="content-right__bot-second1">ĐẤU THẦU PHẦN:</div>
+                                <div class="content-right__bot-second2">
+                                    <div target="left">Loại đấu giá:</div>
+                                    <div target="right">Heighest Bid</div>
+                                </div>
+                                <div class="content-right__bot-second3">
+                                    <div target="left">Nhiều phiên đấu giá được phép:</div>
+                                    <div target="right">Yes</div>
+                                </div>
+                                <div class="content-right__bot-second4">
+                                    <div target="left">Tổng số hồ sơ dự thầu:</div>
+                                    <div target="right">1</div>
+                                </div>
+                                <div class="content-right__bot-second5">
+                                    <div target="left">Bid tăng khác biệt:</div>
+                                    <div target="right">$ 10</div>
+                                </div>
+                                <div class="content-right__bot-second6">
+                                    <div target="left">Số tiền dự thầu cao nhất:</div>
+                                    <div target="right">$ 390</div>
+                                </div>
+                                <div class="content-right__bot-second7">
+                                    <div target="left">Đặt giá cuối của bạn:</div>
+                                    <div target="right">$ 390</div>
+                                </div>
+                                <div class="content-right__bot-second8">
+                                    <div target="left">Số tiền dự thầu tối thiểu sau:</div>
+                                    <div target="right">$ 400</div>
+                                </div>
+                                <div class="content-right__bot-second__shape">
+                                    <div class="content-right__bot-second__shape-first">
+                                        <div class="__bot-second__shape-first1">-</div>
+                                        <div class="__bot-second__shape-first2"></div>
+                                        <div class="__bot-second__shape-first3">+</div>
+                                    </div>
+                                    <div class="content-right__bot-second__shape-second">
+                                        <div class="__bot-second__shape-second1"></div>
+                                        <div class="__bot-second__shape-second2">
+                                            <div></div>
+                                            <div>ĐĂNG KÝ</div>
+                                            <div></div>
+                                        </div>
+                                        <div class="__bot-second__shape-second3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-comment">
+                <div class="content-comment-first">
+                    <div class="content-comment-first-icon"></div>
+                    <div class="content-comment-first-content">Bình Luận</div>
+                </div>
+                <div class="content-comment-second">No comment available</div>
+                <div class="content-comment-third">
+                    <div class="content-comment-third--left">Thêm bình luận...</div>
+                    <div class="content-comment-third--right"></div>
+                </div>
+            </div>
+            <div class="content-endding">
+                <div class="content-endding-logo"></div>
+                <div class="content-endding1">
+                    <div class="content-endding1-title">Về Chúng Tôi</div>
+                    <div class="content-endding1-content">Giới thiệu<br>Quy chế hoạt động<br>Cơ chế giải quyết tranh chấp<br>Tài liệu hướng dẫn sử dụng</div>
+                </div>
+                <div class="content-endding2">
+                    <div class="content-endding2-title">Chính Sách</div>
+                    <div class="content-endding2-content">Điều lệ tham gia đấu giá<br>Văn bản pháp quy<br>Chính sách bảo mật thông tin</div>
+                </div>
+                <div class="content-endding3">
+                    <div class="content-endding3-title">Đăng Ký Nhận Tin Nhắn Qua Email</div>
+                    <div class="content-endding3-content">
+                        <div class="content-endding3-content--left">Địa chỉ Email</div>
+                        <div class="content-endding3-content--right"></div>
+                    </div>
+                    <div class="logo-mobile"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
